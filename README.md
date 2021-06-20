@@ -1,2 +1,2 @@
 # FoodFy
-Web app de gerenciamento de receitas
+Web app de gerenciamento de receitas.
