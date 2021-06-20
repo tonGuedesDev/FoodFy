@@ -1,0 +1,24 @@
+{
+  "name": "FoodFy",
+  "version": "1.0.0",
+  "description": "Web app de gerenciamento de receitas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonGuedesDev/FoodFy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonGuedesDev/FoodFy/issues"
+  },
+  "homepage": "https://github.com/tonGuedesDev/FoodFy#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
