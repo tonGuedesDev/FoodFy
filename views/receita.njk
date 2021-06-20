@@ -1,0 +1,58 @@
+{% extends "layout.njk" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/src/css/components/receita.css">
+{% endblock %}
+
+{% block content %}
+
+<main class="main">
+    <div class="main__image">
+        <img src="{{ receitas.image }}" alt="imagem de {{ receitas.title }}">
+    </div>
+
+    <div class="main__content">
+        <h1 class="main__title">{{ receitas.title }}</h1>
+        <h2 class="main__author">por {{ receitas.author }}</h2>
+
+        <div class="main__revenue">
+            <div class="container">
+                <h2 class="main__subtitle">Ingredientes <span class="span">esconder</span></h2>
+
+                <div class="show">
+                    <ul class="main__list">
+                        {% for ingredient in receitas.ingredients %}
+                        <li class="list__item">{{ ingredient }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="main__subtitle">Modo de preparo <span class="span">esconder</span></h2>
+                
+                <div class="show">
+                    <ul class="main__list">
+                        {% for item in receitas.preparation %}
+                        <li class="list__item">{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="container"> 
+                <h2 class="main__subtitle">Informações adicionais <span class="span">esconder</span></h2>
+                <div class="show">
+                    <p class="main__paragraph">{{ receitas.information }}</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+{% block script %}
+<script src="/src/js/acordion.js"></script>
+{% endblock %}
