@@ -1,0 +1,58 @@
+{% extends "layout.njk" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/src/css/components/banner.css">
+<link rel="stylesheet" href="/src/css/components/card.css">
+{% endblock %}
+
+{% block content %}
+<!-- BANNER -->
+    <div class="banner">
+        <div class="banner__content">
+            <h1 class="banner__title">As melhores receitas</h1>
+            <h2 class="banner__subtitle">Aprenda a construir os melhores pratos
+                com receitas criadas por profissionais
+                do mundo inteiro.</h2>
+        </div>
+
+        <div class="banner__image">
+            <img src="/src/images/banner-image.png" alt="image banner">
+        </div>
+    </div>
+
+    <!-- MAIS ACESSADOS -->
+    <section class="section">
+        <h2 class="section__title">Mais acessadas</h2>
+
+        <section class="cards">
+
+            {% for receita in receitas %}
+            <!-- === CARD === -->
+            <div class="card">
+                <div class="card__image">
+                    <img src="{{ receita.image }}" alt="">
+                </div>
+                <div class="card__content">
+                    <a href="#" class="card__title">{{ receita.title }}</a>
+                    <a href="#" class="card__author">{{ receita.author }}</a>
+                </div>
+            </div>
+            {% endfor %}
+    
+
+        <div class="section__modal">
+            <div class="modal__container">
+                
+            </div>
+        </div>
+    </section>
+{% endblock %}
+    
+
+{% block script %}
+<script src="src/js/modal.js"></script>
+{% endblock %}
+    
+
+
+    
